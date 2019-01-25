@@ -59,4 +59,14 @@ body {
   margin: 0 0 5px 0;
 }
 
+.block-left {
+  color: brown;
+  border: 2px solid black
+  
+}
 
+.block-center {
+  color:greenyellow;
+  border: 2px solid black
+  
+}
