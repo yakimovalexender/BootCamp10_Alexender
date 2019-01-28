@@ -1,0 +1,73 @@
+/* Универсальный, обнулит margin у всех элементов */
+* {
+    margin: 0;
+  }
+  
+  /* Селектор тега */
+  p {
+    color: white;
+  }
+  
+  /* Селектор класса */
+  .text {
+    text-transform: uppercase;
+  }
+  
+  /* Селектор идентификатора */
+  #main-text {
+    font-size: 24px;
+  }
+  
+  /* Селектор потомка */
+  ul li {
+    font-size: 20px;
+    text-transform: uppercase;
+  }
+  
+  /* Дочерний селектор */
+  ul > li {
+    color: #067BC2;
+  }
+  
+  /* Сестринский селектор */
+  h1 + p {
+    color: green;
+    font-size: 20px;
+  }
+  
+  /* Селектор атрибута */
+  a[href="stuff"] {
+    color: #CA3C25;
+  }
+  
+  /* Селектор псевдокласса */
+  a:hover {
+    background-color: green;
+    
+  }
+  
+  /* Оформление примера */
+  a {
+    font-size: 24px;
+  }
+  
+  .section {
+    margin-bottom: 20px;
+    padding: 10px;
+  }
+  
+  .black {
+    background-color: #1B1B1E;
+  }
+  
+  .peach {
+    background-color: #EDCB96;
+  }
+  
+  .pale {
+    background-color: #F3DAD8;
+  }
+  
+  .mikado {
+    background-color: violet;
+  }

@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.mainmenu {
+    text-align: center;
+    background-color: aqua;
+}
+
+.menu {
+    position: relative;
+    display: inline-block;
+    background-color: blue
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: blue;
+    box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.menu:hover>.submenu {
+    display: block;
+}
+
+.submenu {
+    white-space: nowrap;
+}

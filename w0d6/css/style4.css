@@ -1,0 +1,30 @@
+/* 0, 0, 0, 1 */
+p {
+    color: blue;
+}
+
+/* 0, 0, 0, 2 */
+div p {
+    color: orange;
+}
+
+/* 0, 0, 1, 0 */
+.red-text {
+    color: red;
+}
+
+/* 0, 0, 1, 1 */
+div .red-text {
+    color: green;
+}
+
+/* 0, 1, 0, 0 */
+#text {
+    color: rgb(2, 0, 128);
+}
+
+/* оформление примера */
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
