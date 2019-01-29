@@ -1,0 +1,20 @@
+.big-box {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: blueviolet;
+}
+
+.inner {
+    width: 150px;
+    height: 75px;
+    background-color: azure;
+
+}
+
+.center-box {
+    margin: auto;
+}
+
+.rigth-box {
+    margin-left: auto;
+}

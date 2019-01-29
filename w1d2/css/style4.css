@@ -1,0 +1,24 @@
+.WRAPPER {
+    width: 500px;
+    height: 500px;
+    background-color: aqua;
+    position: relative;
+    margin: auto
+}
+
+.container {
+    width: 200px;
+    height: 200px;
+    background-color: rgb(12, 112, 116);
+    /* position: absolute; */
+    top: 0px
+    
+}
+.container1 {
+    width: 200px;
+    height: 200px;
+    background-color: rgb(46, 233, 240);
+    /* position: absolute; */
+    top: 0px
+    
+}

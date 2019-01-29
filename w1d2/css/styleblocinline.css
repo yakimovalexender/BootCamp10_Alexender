@@ -1,0 +1,52 @@
+.header {
+    height: 40px;
+    background-color: chartreuse;
+    margin-bottom: 5px;
+    background-image: url(https://64.img.avito.st/640x480/3828549264.jpg);height: 40px;
+text-align: center;
+font-size: 34px;
+padding-top: 10px;
+
+}
+
+.navigation {
+    height: 50px;
+    background-color: rgb(238, 255, 0);
+    margin-bottom: 5px;
+    text-align: center;
+font-size: 34px;
+padding-top: 25px;
+}
+
+.content {
+    height: 200px;
+    background-color: cornflowerblue;
+    display: inline-block;
+    width: 70%;
+    text-align: center;
+font-size: 34px;
+justify-content: center;
+padding-top: 100px
+
+    
+}
+
+.sidebar {
+    height: 200px;
+    background-color: blue;
+    display: inline-block;
+    width: 25%;
+    text-align: center;
+font-size: 24px;
+font-size: 34px;
+padding-top: 100px;
+}
+
+.footer {
+    height: 30px;
+    background-color: chocolate;
+    margin-top: 5px;
+    text-align: center;
+font-size: 29px;
+ 
+}

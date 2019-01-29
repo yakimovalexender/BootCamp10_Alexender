@@ -1,0 +1,13 @@
+.outer-box {
+    width: 200px;
+    height: 200px;
+    background-color: blue
+    
+}
+
+.inner-box {
+    background-color: aquamarine;
+    width: 100px;
+    height: 100px;
+    margin-top: 50px;
+}

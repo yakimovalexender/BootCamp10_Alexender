@@ -1,0 +1,38 @@
+.conteiner {
+    background-color: bisque;
+    width: 600px;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.item1, .item2, .item3, .item4 {
+    margin: 5px;
+    width: 200px;
+    height: 200px;
+    
+}
+
+.item1 {
+    background-color: greenyellow;
+    
+   
+}
+
+.item2 {
+    background-color: rgb(47, 120, 255);
+   
+   
+}
+
+.item3 {
+    background-color: rgb(255, 95, 47);
+   
+}
+
+.item4 {
+    background-color: rgb(226, 216, 128);
+    
+    
+}
