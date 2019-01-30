@@ -1,0 +1,55 @@
+.outbox {
+    margin-bottom: 10px;
+    background-color: rgb(213, 255, 205);
+    padding: 20px;
+}
+
+.outbox div {
+    display: inline-block;
+    background-color: blue;
+}
+
+.outbox div:nth-child(1) {
+    height: 50px;
+    width: 75px;
+}
+
+.outbox div:nth-child(2) {
+    height: 100px;
+    width: 75px;
+}
+
+.outbox div:nth-child(3) {
+    height: 150px;
+    width: 75px;
+}
+
+.outbox.top > div {
+    vertical-align: top
+}
+
+.outbox.middle > div {
+    vertical-align: middle
+}
+
+.outbox.bottom > div {
+    vertical-align: bottom
+}
+
+.text {
+    font-family: 'Pacifico', cursive;
+    text-decoration: rgb(59, 121, 236)
+}
+
+.super {
+    vertical-align: super;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: crimson
+}
+
+.sub {
+    vertical-align: sub;
+    font-family: 'Lobster', cursive;
+    color: blue
+
+}

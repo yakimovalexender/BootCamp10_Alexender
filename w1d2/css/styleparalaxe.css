@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    line-height: 1.5;
+}
+
+.wrapper {
+    max-width: 960px;
+    min-width: 320px;
+    margin: auto;
+    background-color: #fff;
+    padding: 20px;
+}
+
+.section {
+    margin-bottom: 30px;
+
+}
+
+.section h2 {
+    font-size: 30px;
+}
+
+.section p {
+    font-size: 18px;
+}
+
+.parallax {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 400;
+}
+
+.it {
+    background-image: url("http://lazy-tour.by/wp-content/uploads/2014/01/408541-2048x1341-1024x670.jpg");
+}
+
+.itt {
+    background-image: url("http://s1.1zoom.me/big0/519/Italy_Lake_Mountains_Winter_Houses_Lago_di_Sauris_538962_1280x768.jpg");
+}
+
+.end {
+background-image: url("https://romantiki.ru/wp-content/uploads/users/visor/end5s.jpg"); }
