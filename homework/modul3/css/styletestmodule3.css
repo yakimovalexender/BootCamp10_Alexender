@@ -1,0 +1,27 @@
+body {
+    /* Если в CSS используются 2 свойства для задания
+    направления или размера, 
+    то 1-е свойство - это описание горизонтали (ось X)
+    а 2-е свойсво - это описание вертикали (ось Y) */
+ 
+    /* краткая запись */
+    background: #ccf url("https://images.pexels.com/photos/724712/pexels-photo-724712.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb") no-repeat center center fixed;
+    background-size: cover;
+ 
+    /* полная запись */
+    /* background-color: #ccf; */
+    /* background-image: url(bg5.jpg); */
+    /* background-repeat: no-repeat; */
+    /* background-position: center center;*/
+    /* background-attachment: fixed;*/
+ 
+    /* варианты, показывающие на что влияет это свойсто */
+    /* background-position: 50% 50%; */
+    /* background-position: top; */
+ 
+    /* варианты, показывающие на что влияет это свойсто */
+    /* background-size: 100% auto; */
+    /*background-size: auto 100%;*/
+    /* background-size: contain; */
+    /* background-size: cover; */
+ }
