@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.conteinerleft {
+    width: 200px;
+    display: flex;
+    height: 200px;
+    background-color: yellow;
+}
+
+.conteinerrigth {
+    width: 200px;
+    display: flex;
+    height: 200px;
+    background-color: blue;
+    display: none;
+}
+
+.conteinerrigth { 
+    display: none;
+}
+#dropdown:checked ~ .conteinerrigth {
+    display: block;
+}
