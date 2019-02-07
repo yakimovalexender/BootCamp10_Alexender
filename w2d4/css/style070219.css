@@ -1,0 +1,18 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.icon {
+    fill: aqua;
+    width: 150px;
+    height: 150px;
+    background-color: blue;
+}
+
+.icon:hover  {
+    background-image: url(../img/WIN_20190121_12_03_35_Pro.jpg);
+    /* width: 30px; */
+    height: 30px; 
+}
