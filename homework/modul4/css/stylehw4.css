@@ -1,0 +1,35 @@
+.wrapper {
+    width: 400px;
+    margin: auto;
+    border: 1px solid red;
+    box-sizing: border-box ;
+  /* т.к. другого контента кроме блоков с 
+  float в   контейнере нет, то контенер 
+  схлопывается по высоте,
+  оставляя  10px заданных с помощью padding.
+  Отменить схлопывание можно расскоментировав 
+  строки с height: auto; и overflow: hidden; 
+  - это способ зачистки контейнера от действия 
+  float 
+  */
+    padding: 10px;
+  
+  
+    height: auto;
+    overflow: hidden;
+ 
+}
+
+.box {      
+  background: #7E9F35;
+  width: 120px;
+  height: 120px;
+  font-family: sans-serif;
+  font-size: 26px;
+  /* горизонтальное выравнивание текста  */
+  text-align: center;
+  /* горизонтальное выравнивание текста  */
+  line-height: 120px;
+}   
+.left { float: left; }
+.right { float: right; }
