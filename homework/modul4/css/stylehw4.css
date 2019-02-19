@@ -1,35 +1,82 @@
-.wrapper {
-    width: 400px;
-    margin: auto;
-    border: 1px solid red;
-    box-sizing: border-box ;
-  /* т.к. другого контента кроме блоков с 
-  float в   контейнере нет, то контенер 
-  схлопывается по высоте,
-  оставляя  10px заданных с помощью padding.
-  Отменить схлопывание можно расскоментировав 
-  строки с height: auto; и overflow: hidden; 
-  - это способ зачистки контейнера от действия 
-  float 
-  */
-    padding: 10px;
-  
-  
-    height: auto;
-    overflow: hidden;
- 
+* {
+  background-color: white;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  /* border: 1px solid #55c5e9; */
 }
 
-.box {      
-  background: #7E9F35;
-  width: 120px;
-  height: 120px;
-  font-family: sans-serif;
-  font-size: 26px;
-  /* горизонтальное выравнивание текста  */
-  text-align: center;
-  /* горизонтальное выравнивание текста  */
-  line-height: 120px;
-}   
-.left { float: left; }
-.right { float: right; }
+
+.logo {
+  text-transform: uppercase;
+  font-family: Roboto-Light, Roboto-Black, AdobeInvisFont, MyriadPro-Regular;
+  font-size: 30px;
+  color: #b1b0b0;
+  display: inline-block;
+  margin-top: 28px;
+
+}
+
+.logo>p::first-letter {
+  color: rgba(26, 188, 156, 255);
+
+}
+
+
+.menu-item {
+  list-style-type: none;
+  padding-top: 20px;
+  text-transform: uppercase;
+  text-align: right;
+  margin-left: auto;
+  margin-right: 260px;
+  display: inline-block;
+  width: 467px;
+  padding-right: 33px;
+  font-family: OpenSans-Bold, AdobeInvisFont, MyriadPro-Regular;
+  font-size: 14px;
+}
+
+.item:first-child {
+  color: blue;
+}
+
+.item a {
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: 0px;
+  line-height: 11px;
+  color: #0f0101;
+  font-family: "Open Sans";
+  font-weight: 700;
+  text-align: right;
+  padding-left: 10px;
+}
+
+.menu-item ul li:first-child {
+  color: blue;
+}
+
+.item {
+  display: inline-block;
+
+}
+
+.wrapper {
+  width: 1647px;
+  margin-left: 260px;
+  margin-right: 260px;
+}
+
+.top-menu {
+  text-align: right;
+}
+
+ul li  {
+  display: inline-block;
+  text-align: left;
+  padding-left: 8px;
+}
+nav {
+  margin-top: 28px;
+}
