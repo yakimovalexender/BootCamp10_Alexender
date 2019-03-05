@@ -271,7 +271,7 @@
 
 // for(const el of userArr) {
 //   console.log((`${el[0]} :  ${el[1]}`));
-  
+
 // }
 
 
@@ -363,7 +363,7 @@
 
 //  result = x + y;
 //  console.log(result);
- 
+
 
 // const age = Number(prompt(`get age`, ``));
 // console.log(age);
@@ -419,7 +419,7 @@
 // const sameMessage1 = `My ${car} old ${years} driver name my ${car} mister ${driver}  ` 
 
 // console.log(sameMessage1);
- // Результат работы confirm и promp,
+// Результат работы confirm и promp,
 // мы можем записать в переменную.
 // В дальнейшем мы научимся проверять
 // введенные данные, выбраную опцию и т.д.
@@ -443,5 +443,79 @@
 // console.log( typeof number ); // 'string'
 // console.log(number); // '5'
 
-let isActive = false;
-alert( isActive ); // "false"
+// let isActive = false;
+// alert( isActive ); // "false"
+
+// const monthName = "January";
+// let result;
+
+// if (monthName === "June") {
+//   let result = "summer";
+// } else {
+//   let result = "winter";
+// }
+
+// // Конструкция выше записанная тернарным оператором
+// const season = monthName === "June" ? "summer" : "winter";
+
+// const bool = Boolean(``);
+// console.log(bool);
+//  const num = Number(prompt('enter a number!'));
+//  const isValidNumber = Number.isNaN(num);
+//  console.log(isValidNumber);
+
+const size_small = 0;
+const size_medium = 1;
+const size_large = 2;
+
+const price_small = 50;
+const price_medium = 100;
+const price_large = 200;
+
+const userInput = prompt('0 - small, 1 - medium, 2 - large', 1);
+const coffeeSize = Number(userInput);
+
+const isValidInput = userInput !== null && !Number.isNaN(coffeeSize);
+
+if (isValidInput) {
+
+  let haveCoffe;
+  let coffeeSize;
+  let coffeePrice;
+
+  switch (coffeeSize) {
+
+    case size_small:
+      console.log('маленький кофе');
+      haveCoffe = true;
+      coffeeSize = size_small;
+      coffeePrice = price_small;
+      // const userCash0 = prompt(`давай бабло! С тебя ${price_small}`);
+      console.log(coffePrice);
+      break;     
+      
+
+    case size_medium:
+      console.log('средний кофе');
+      haveCoffe = true;
+      coffeeSize = size_medium;
+      coffeePrice = price_medium;
+      // const userCash1 = prompt(`давай бабло! С тебя ${price_medium}`);
+      break;
+
+    case size_large:
+      console.log('большой кофе');
+      haveCoffe = true;
+      coffeeSize = size_large;
+      coffeePrice = price_large;
+      // const userCash2 = prompt(`давай бабло! С тебя ${price_large}`);
+      break;
+
+    default:
+      alert('нет такого кофе');
+
+  }
+} else {
+  alert('что то не так ввели!!!');
+
+}
