@@ -479,36 +479,36 @@ const isValidInput = userInput !== null && !Number.isNaN(coffeeSize);
 
 if (isValidInput) {
 
-  let haveCoffe;
-  let coffeeSize;
-  let coffeePrice;
+  // let haveCoffe;
+  // let coffeeSize;
+  // let coffeePrice;
 
   switch (coffeeSize) {
 
     case size_small:
       console.log('маленький кофе');
-      haveCoffe = true;
-      coffeeSize = size_small;
-      coffeePrice = price_small;
-      // const userCash0 = prompt(`давай бабло! С тебя ${price_small}`);
-      console.log(coffePrice);
+      // haveCoffe = true;
+      // coffeeSize = size_small;
+      // coffeePrice = price_small;
+      const userCash0 = prompt(`давай бабло! С тебя ${price_small}`);
+      // console.log(coffePrice);
       break;     
       
 
     case size_medium:
       console.log('средний кофе');
-      haveCoffe = true;
-      coffeeSize = size_medium;
-      coffeePrice = price_medium;
-      // const userCash1 = prompt(`давай бабло! С тебя ${price_medium}`);
+      // haveCoffe = true;
+      // coffeeSize = size_medium;
+      // coffeePrice = price_medium;
+      const userCash1 = prompt(`давай бабло! С тебя ${price_medium}`);
       break;
 
     case size_large:
       console.log('большой кофе');
-      haveCoffe = true;
-      coffeeSize = size_large;
-      coffeePrice = price_large;
-      // const userCash2 = prompt(`давай бабло! С тебя ${price_large}`);
+      // haveCoffe = true;
+      // coffeeSize = size_large;
+      // coffeePrice = price_large;
+      const userCash2 = prompt(`давай бабло! С тебя ${price_large}`);
       break;
 
     default:
