@@ -125,4 +125,11 @@
 // console.log(number(prompt(`enter num`)));
 
 /////////////
+/*
+const a = {x: 1, y: 2};
+const b = {x: 0, z: 3};
+
+const c = Object.assign({}, a, b);
+console.log(c); // {x: 0, y: 2, z: 3}
+*/
 
