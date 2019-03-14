@@ -1,4 +1,8 @@
-`use strict`;
+'use strict';
+let a=5;
+console.log(a);
+
+
 /*
   Есть список категорий с классом categories (на вкладке HTML).
   
