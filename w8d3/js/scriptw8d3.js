@@ -328,10 +328,43 @@ function setActiveBtn(target) {
 // let calc = (a,b) => a+b;
 // console.log(calc(3,4));
 
-let a = 3;
-function addTwo (x) {
-  let ret = x + 2 ;
-  return ret
+// let a = 3;
+// function addTwo (x) {
+//   let ret = x + 2 ;
+//   return ret
+// }
+// let b = addTwo(a)
+// console.log(b);
+
+
+let temperatureDegree = document.querySelector('.temperature-degree');
+let temperatureDescription =  document.querySelector('.temperature-description')
+
+let onLoad = ()=> {
+  let lat;
+  let long;
+
+  if(navigator.geolocation){
+    navigator.geolocation.getCurrentPosition(position => {
+      // console.log(navigator.geolocation);
+      // console.log(position);
+      lat = position.coords.latitude;
+      long =  position.coords.longitude;
+
+      let proxy = 'https://cors-anywhere.herokuapp.com/';
+
+      let api = `${proxy}https://api.darksky.net/forecast/f9fe7205a67a360e338008aba15db943/${lat},${long}`;
+
+      fetch(api)
+        .then(response => response.json())
+        .then(data => {
+          console.log(data);
+          const {summary, temperature} = data.currently;
+          temperatureDegree.textContent = temperature;
+          temperatureDescription.textContent = summary;
+        })
+      
+    })
+  }  
 }
-let b = addTwo(a)
-console.log(b);
+window.addEventListener('load', onLoad);

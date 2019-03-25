@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="X-UA-Compatible" content="ie=edge"><title>Module 2</title><link rel="stylesheet" href="Module%202_files/styles.css"><script async="" src="Module%202_files/scripts.js"></script></head><body class="theory-page"><div class="wrapper"><article><header><nav class="table-of-contents" id="main-nav"><ol class="page-nav" id="page-nav"><li><a href="#entry">Введение в циклы</a></li><li><a href="#while">Цикл while</a></li><li><a href="#for">Цикл for</a></li><li><a href="#for-of">Цикл for...of</a></li><li><a href="#break-continue">Инструкции break и continue</a></li></ol></nav></header><section><h2 id="entry">Введение в циклы</h2><p>При
+ написании скриптов очень частой задачей выступает выполнение 
+однотипного действия много раз. Например, вывести клиентов из списка 
+один за другим. Или перебрать суммы зарплат и для каждой выполнить 
+одинаковый код. Для многократного повторения одного участка кода – 
+предусмотрены циклы.</p><p><strong>Цикл</strong> — разновидность 
+управляющей конструкции в высокоуровневых языках программирования, 
+предназначенная для организации многократного исполнения набора 
+инструкций.</p><h3>Основные понятия</h3><p><strong>Тело цикла</strong> - последовательность инструкций, предназначенная для многократного исполнения.</p><p><strong>Итерация</strong> - единичное выполнение тела цикла.</p><p><strong>Условием выхода или условие окончания цикла</strong>
+ - выражение определяющее, будет в очередной раз выполняться итерация, 
+или цикл завершится. Так же это может называться условием продолжения 
+цикла, в зависимости от того, как интерпретируется его истинность — как 
+признак необходимости завершения или продолжения цикла.</p><p><strong>Счётчик цикла</strong>
+ - переменная, хранящая текущий номер итерации. Цикл не обязательно 
+содержит счётчик, счётчик не обязан быть один — условие выхода из цикла 
+может зависеть от нескольких изменяемых в цикле переменных, а может 
+определяться внешними условиями (например, наступлением определённого 
+времени), в последнем случае счётчик может вообще не понадобиться.</p><p>Исполнение любого цикла включает:</p><ul><li>первоначальную инициализацию переменных цикла</li><li>проверку условия выхода</li><li>исполнение тела цикла</li><li>обновление переменной цикла на каждой итерации</li></ul><p>Кроме
+ того, большинство языков программирования предоставляют средства для 
+досрочного управления циклом, например, операторы завершения цикла, то 
+есть выхода из цикла независимо от истинности условия выхода.</p><h3>Виды циклов</h3><p><strong>Цикл с предусловием</strong>
+ - цикл, который выполняется пока истинно некоторое условие, указанное 
+перед его началом. Это условие проверяется до выполнения тела цикла, 
+поэтому тело может быть не выполнено ни разу (если условие с самого 
+начала ложно).В JavaScript это цикл <code>while</code>.</p><p><strong>Цикл с постусловием</strong>
+ - цикл, в котором условие проверяется после выполнения тела цикла. 
+Отсюда следует, что тело всегда выполняется хотя бы один раз. В 
+JavaScript это цикл <code>do...while</code>.</p><p><strong>Цикл со счётчиком</strong>
+ - цикл, в котором некоторая переменная изменяет своё значение от 
+заданного начального значения до конечного значения с некоторым шагом, и
+ для каждого значения этой переменной тело цикла выполняется один раз. В
+ большинстве процедурных языков программирования реализуется оператором <code>for</code>,
+ в котором указывается счётчик (так называемая «переменная цикла»), 
+требуемое количество проходов (или граничное значение счётчика) и, 
+возможно, шаг, с которым изменяется счётчик.</p><p><strong>Беcконечные циклы</strong>
+ - иногда в программах используются циклы, выход из которых не 
+предусмотрен логикой программы. Такие циклы называются безусловными, или
+ бесконечными. Для обеспечения бесконечного повторения проверка условия в
+ таком цикле либо отсутствует, либо заменяется константным значением.</p></section><section><h2 id="while">Цикл while</h2><p>Оператор <code>while</code> создает цикл, который выполняет блок кода, пока условие проверки оценивается как <code>true</code>.</p><pre class=" language-javascript"><code class=" language-javascript"><span class="token keyword keyword-while">while</span><span class="token punctuation">(</span>expression<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// код, тело цикла (statement)</span>
+<span class="token punctuation">}</span></code></pre><p>Оператор <code>while</code> вычисляет <code>expression</code> перед каждой итерацией цикла. Если <code>expression</code> принимает значение <code>true</code>, оператор <code>while</code> выполняет <code>statement</code>. Если <code>expression</code> оценивается как <code>false</code>, выполнение цикла прерывается и скрипт продолжает выполнять инструкции после цикла <code>while</code>.</p><p>Так как <code>while</code> вычисляет <code>expression</code> перед каждой итерацией, он известен как цикл предварительного тестирования (перед тем как выполнить <code>statement</code>, проверяется <code>expression</code>). Из-за этого возможно, что <code>statement</code> внутри цикла <code>while</code> никогда не выполнится.</p><figure><img src="Module%202_files/while.png" alt=""><figcaption>Блок-схема иллюстрирует цикл while</figcaption></figure><pre class=" language-javascript"><code class=" language-javascript"><span class="token comment">// Сделаем простой счетчик</span>
+<span class="token keyword keyword-let">let</span> counter <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-while">while</span> <span class="token punctuation">(</span>counter <span class="token operator">&lt;</span> <span class="token number">10</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"counter: "</span><span class="token punctuation">,</span> counter<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">// запись counter += 1 аналогична counter = counter + 1</span>
+  counter <span class="token operator">+=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// Будем заполнять места в отеле до тех пор пока</span>
+<span class="token comment">// текущее количество клиентов не будет равно максимально допустимому</span>
+<span class="token keyword keyword-let">let</span> clientCounter <span class="token operator">=</span> <span class="token number">18</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-const">const</span> maxClients <span class="token operator">=</span> <span class="token number">25</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-while">while</span><span class="token punctuation">(</span>clientCounter <span class="token operator">&lt;</span> maxClients<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>clientCounter<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  clientCounter <span class="token operator">+=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// Переберем массив клиентов и выведем их имена</span>
+<span class="token keyword keyword-const">const</span> clients <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"Mango"</span><span class="token punctuation">,</span> <span class="token string">"Ajax"</span><span class="token punctuation">,</span> <span class="token string">"Poly"</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-let">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-while">while</span> <span class="token punctuation">(</span>i <span class="token operator">&lt;</span> clients<span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Logging clients: '</span><span class="token punctuation">,</span> clients<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  i <span class="token operator">+=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// С помощью цикла можно заполнять массив данными</span>
+<span class="token keyword keyword-const">const</span> numbers <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-let">let</span> num <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-while">while</span> <span class="token punctuation">(</span>num <span class="token operator">&lt;</span> <span class="token number">10</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  numbers<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  num <span class="token operator">+=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"numbers: "</span><span class="token punctuation">,</span> numbers<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre><h3>do...while</h3><p>Оператор цикла <code>do...while</code> создает цикл, который выполняет блок кода до тех пор, пока <code>expression</code> не станет равным <code>false</code>.</p><p>В отличие от цикла <code>while</code>, цикл <code>do-while</code> всегда выполняет <code>statement</code> как минимум один раз, прежде чем он оценит <code>expression</code>. Поскольку <code>expression</code> оценивается только после того, как <code>statement</code> выполнено, цикл <code>do-while</code> называется циклом пост-теста.</p><pre class=" language-javascript"><code class=" language-javascript"><span class="token keyword keyword-do">do</span> <span class="token punctuation">{</span>
+  <span class="token comment">// statement</span>
+<span class="token punctuation">}</span> <span class="token keyword keyword-while">while</span><span class="token punctuation">(</span>expression<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre><div class="note"><p>Внутри цикла нужно внести изменения в некоторую переменную, чтобы убедиться, что выражение равно <code>false</code> после итераций. В противном случае будет бесконечный цикл.</p></div><figure><img src="Module%202_files/do-while.png" alt=""><figcaption>Блок-схема иллюстрирует цикл do-while</figcaption></figure><pre class=" language-javascript"><code class=" language-javascript"><span class="token keyword keyword-let">let</span> input <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-do">do</span> <span class="token punctuation">{</span>
+  input <span class="token operator">=</span> <span class="token function">Number</span><span class="token punctuation">(</span> <span class="token function">prompt</span><span class="token punctuation">(</span><span class="token string">'Введите число больше 10'</span><span class="token punctuation">,</span> <span class="token string">''</span><span class="token punctuation">)</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token keyword keyword-while">while</span><span class="token punctuation">(</span>input <span class="token operator">&lt;=</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></section><section><h2 id="for">Цикл for</h2><p>До ознакомления с функциональным стилем разработки чаще всего применяется цикл <code>for</code>. Оператор <code>for</code> позволяет создать цикл с тремя необязательными выражениями.</p><pre class=" language-javascript"><code class=" language-javascript"><span class="token keyword keyword-for">for</span> <span class="token punctuation">(</span>initialization<span class="token punctuation">;</span> condition<span class="token punctuation">;</span> post<span class="token operator">-</span>expression<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// statements</span>
+<span class="token punctuation">}</span></code></pre><p>Алгоритм исполнения цикла <code>for</code>:</p><ul><li><strong>Инициализация (initialization)</strong>
+ - выражение инициализации выполняется один раз, когда начинается цикл. 
+Используется для инициализации переменной-счетчика. Если 
+переменная-счетчик объявлена с использованием ключевого слова <code>var</code>,
+ переменная счетчика не является локальной для цикла. Это означает, что 
+вы можете ссылаться на переменную после окончания цикла. Однако, если 
+используется ключевое слово <code>let</code>, переменная счетчика является локальной для цикла.</li><li><strong>Условие (condition, test)</strong>
+ - представляет собой выражение, оцениваемое перед каждой итерацией 
+цикла. Тело цикла выполняется только тогда, когда выражение условия 
+принимает значение <code>true</code>. Цикл завершается, если окончание равно <code>false</code>. Обратите внимание, что условие является необязательным. Если вы его опустите, оператор <code>for</code> считает это истиной.</li><li><strong>Тело (выражение, statements)</strong> - выполняется в случае удовлетворения условия.</li><li><strong>Пост-выражение (post-expression, update)</strong>
+ - выполняется после тела на каждой итерации цикла, но перед проверкой 
+условия. Как правило, используется для обновления переменной-счетчика.</li></ul><pre class=" language-javascript"><code class=" language-javascript"><span class="token comment">//=============================================</span>
+<span class="token comment">// Итераторы по традиции называются буквами i/j/k</span>
+<span class="token keyword keyword-const">const</span> number <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-for">for</span><span class="token punctuation">(</span><span class="token keyword keyword-let">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> number<span class="token punctuation">;</span> i <span class="token operator">+=</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//=============================================</span>
+<span class="token comment">// Вспомним про операцию a % b и выведем остаток</span>
+<span class="token comment">// от деления используя цикл</span>
+<span class="token keyword keyword-for">for</span><span class="token punctuation">(</span><span class="token keyword keyword-let">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> max <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> max<span class="token punctuation">;</span> i <span class="token operator">+=</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>max<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> % </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>i<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> = `</span></span><span class="token punctuation">,</span> max <span class="token operator">%</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//=============================================</span>
+<span class="token keyword keyword-const">const</span> clients <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'Mango'</span><span class="token punctuation">,</span> <span class="token string">'Ajax'</span><span class="token punctuation">,</span> <span class="token string">'Poly'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-for">for</span><span class="token punctuation">(</span><span class="token keyword keyword-let">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> max <span class="token operator">=</span> clients<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i <span class="token operator">&lt;</span> max<span class="token punctuation">;</span> i <span class="token operator">+=</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>clients<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//=============================================</span>
+<span class="token keyword keyword-const">const</span> numbers <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-for">for</span><span class="token punctuation">(</span><span class="token keyword keyword-let">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">10</span><span class="token punctuation">;</span> i <span class="token operator">+=</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  numbers<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token template-string"><span class="token string">`number-</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>i<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>numbers<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></section><section><h2 id="for-of">Цикл for...of</h2><p>Оператор <code>for...of</code>
+ создает цикл, перебирающий итерируемые объекты (включая Array, Map, 
+Set, String, TypedArray, объект аргументов и т. д.). Тело цикла будет 
+выполняться для значения каждого отдельного элемента.</p><pre class=" language-javascript"><code class=" language-javascript"><span class="token keyword keyword-for">for</span> <span class="token punctuation">(</span>variable <span class="token keyword keyword-of">of</span> iterable<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token comment">// statement</span>
+<span class="token punctuation">}</span></code></pre><ul><li><code>variable</code> - для каждой итерации значение свойства присваивается переменной.</li><li><code>iterable</code> - коллекция, который имеет перечислимые свойства и может быть повторен.</li></ul><pre class=" language-javascript"><code class=" language-javascript"><span class="token comment">// Итерация по массиву</span>
+<span class="token keyword keyword-const">const</span> clients <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'Mango'</span><span class="token punctuation">,</span> <span class="token string">'Ajax'</span><span class="token punctuation">,</span> <span class="token string">'Poly'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-for">for</span><span class="token punctuation">(</span><span class="token keyword keyword-const">const</span> value <span class="token keyword keyword-of">of</span> clients<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// Итерация по строке</span>
+<span class="token keyword keyword-const">const</span> iterable <span class="token operator">=</span> <span class="token string">'javascript'</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-for">for</span> <span class="token punctuation">(</span><span class="token keyword keyword-const">const</span> value <span class="token keyword keyword-of">of</span> iterable<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre><div class="note"><p>В следующих модулях мы познакомимся с типом данных - <code>Object</code>. Объект не итеруемая коллекция, нельзя использовать <code>for...of</code> для перебора ключей объекта через имя переменной.</p></div></section><section><h2 id="break-continue">Инструкции break и continue</h2><h3>break</h3><p>Выйти из цикла можно не только при проверке условия, но и вообще в любой момент. Эту возможность обеспечивает инструкция <code>break</code>.
+ Она полностью прекращает выполнение цикла и передаёт управление на 
+строку за его телом. Вообще, сочетание «бесконечный цикл + break» – 
+отличная штука для тех ситуаций, когда условие, по которому нужно 
+прерваться, находится не в начале-конце цикла, а посередине.</p><p>Давайте искать имя клиента в массиве имен, если нашли прервем цикл так как нет смысла искать дальше, имена у нас уникальные.</p><pre class=" language-javascript"><code class=" language-javascript"><span class="token keyword keyword-const">const</span> clients <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"Mango"</span><span class="token punctuation">,</span> <span class="token string">"Poly"</span><span class="token punctuation">,</span> <span class="token string">"Ajax"</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-const">const</span> clientName <span class="token operator">=</span> <span class="token string">"Poly"</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-let">let</span> resultMsg <span class="token operator">=</span> <span class="token string">""</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-for">for</span> <span class="token punctuation">(</span><span class="token keyword keyword-const">const</span> value <span class="token keyword keyword-of">of</span> clients<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// На каждой итерации мы будем проверять совпадает ли</span>
+  <span class="token comment">// элемент массива с именем клиента.</span>
+  <span class="token comment">// Если совпадает то мы записываем в resultMsg сообщение</span>
+  <span class="token comment">// об успехе и делаем break чтобы не искать дальше</span>
+
+  <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>value <span class="token operator">===</span> clientName<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    resultMsg <span class="token operator">=</span> <span class="token string">"Клиент с таким именем есть в базе данных!"</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-break">break</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">// Если они не совпадают то запишем в resultMsg</span>
+  <span class="token comment">// сообщeние об отсутсвии имени</span>
+  resultMsg <span class="token operator">=</span> <span class="token string">"Клиента с таким именем нету в базе данных!"</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>resultMsg<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Клиент с таким именем есть в базе данных!</span></code></pre><p>Можно изначально задать <code>resultMsg</code> значение неудачи поиска, а в цикле перезаписать его на успех если нашли имя. Но <code>break</code> всеравно пригодится, так как если у нас массив из <code>10000</code> клиентов а нужный нам стоит на позиции <code>2</code>, то нет абсолютно никакого смысла перебирать оставшиеся <code>9998</code> элементов.</p><pre class=" language-javascript"><code class=" language-javascript"><span class="token keyword keyword-const">const</span> clients <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"Mango"</span><span class="token punctuation">,</span> <span class="token string">"Poly"</span><span class="token punctuation">,</span> <span class="token string">"Ajax"</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-const">const</span> clientName <span class="token operator">=</span> <span class="token string">"Poly"</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-let">let</span> resultMsg <span class="token operator">=</span> <span class="token string">"Клиента с таким именем нету в базе данных!"</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-for">for</span> <span class="token punctuation">(</span><span class="token keyword keyword-const">const</span> value <span class="token keyword keyword-of">of</span> clients<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// На каждой итерации мы будем проверять совпадает ли</span>
+  <span class="token comment">// элемент массива с именем клиента.</span>
+  <span class="token comment">// Если совпадает то мы записываем в resultMsg сообщение</span>
+  <span class="token comment">// об успехе и делаем break чтобы не искать дальше</span>
+
+    <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>value <span class="token operator">===</span> clientName<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      resultMsg <span class="token operator">=</span> <span class="token string">"Клиент с таким именем есть в базе данных!"</span><span class="token punctuation">;</span>
+      <span class="token keyword keyword-break">break</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+  <span class="token comment">// Если не совпадает то ничего не делаем</span>
+<span class="token punctuation">}</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>resultMsg<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Клиент с таким именем есть в базе данных!</span></code></pre><h3>continue</h3><p>Директива <code>continue</code> прекращает выполнение текущей итерации цикла. Она – в некотором роде «младшая сестра» директивы <code>break</code>.
+ Прерывает не весь цикл, а только текущее выполнение его тела, как будто
+ оно закончилось. Её используют, если понятно, что на текущей итерации 
+цикла делать больше нечего или вообще ничего делать не нужно и пора 
+переходить на следующую итерацию.</p><pre class=" language-javascript"><code class=" language-javascript"><span class="token comment">// Используем цикл для вывода только нечетных чисел!</span>
+<span class="token comment">// Для чётных i срабатывает continue, выполнение тела</span>
+<span class="token comment">// прекращается и управление передаётся на следующую итерацию.</span>
+
+<span class="token keyword keyword-const">const</span> number <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-for">for</span> <span class="token punctuation">(</span><span class="token keyword keyword-let">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> number<span class="token punctuation">;</span> i <span class="token operator">+=</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>i <span class="token operator">%</span> <span class="token number">2</span> <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token keyword keyword-continue">continue</span><span class="token punctuation">;</span>
+
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Нечетное i: "</span><span class="token punctuation">,</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 1, 3, 5, 7, 9</span>
+<span class="token punctuation">}</span></code></pre></section></article><a href="#main-nav" class="to-page-nav"></a></div></body></html>
