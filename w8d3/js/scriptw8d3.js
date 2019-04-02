@@ -337,34 +337,195 @@ function setActiveBtn(target) {
 // console.log(b);
 
 
-let temperatureDegree = document.querySelector('.temperature-degree');
-let temperatureDescription =  document.querySelector('.temperature-description')
+// let temperatureDegree = document.querySelector('.temperature-degree');
+// let temperatureDescription =  document.querySelector('.temperature-description')
 
-let onLoad = ()=> {
-  let lat;
-  let long;
+// let onLoad = ()=> {
+//   let lat;
+//   let long;
 
-  if(navigator.geolocation){
-    navigator.geolocation.getCurrentPosition(position => {
-      // console.log(navigator.geolocation);
-      // console.log(position);
-      lat = position.coords.latitude;
-      long =  position.coords.longitude;
+//   if(navigator.geolocation){
+//     navigator.geolocation.getCurrentPosition(position => {
+//       // console.log(navigator.geolocation);
+//       // console.log(position);
+//       lat = position.coords.latitude;
+//       long =  position.coords.longitude;
 
-      let proxy = 'https://cors-anywhere.herokuapp.com/';
+//       let proxy = 'https://cors-anywhere.herokuapp.com/';
 
-      let api = `${proxy}https://api.darksky.net/forecast/f9fe7205a67a360e338008aba15db943/${lat},${long}`;
+//       let api = `${proxy}https://api.darksky.net/forecast/f9fe7205a67a360e338008aba15db943/${lat},${long}`;
 
-      fetch(api)
-        .then(response => response.json())
-        .then(data => {
-          console.log(data);
-          const {summary, temperature} = data.currently;
-          temperatureDegree.textContent = temperature;
-          temperatureDescription.textContent = summary;
-        })
+//       fetch(api)
+//         .then(response => response.json())
+//         .then(data => {
+//           console.log(data);
+//           const {summary, temperature} = data.currently;
+//           temperatureDegree.textContent = temperature;
+//           temperatureDescription.textContent = summary;
+//         })
       
-    })
-  }  
+//     })
+//   }  
+// }
+// window.addEventListener('load', onLoad);
+// let num = 29 ;
+// while (num <55) {
+//   console.log(num);
+//   num++;
+// }
+
+// let num = 50;
+// do { 
+//   console.log(num);
+//   num++;
+// }
+// while (num < 55);
+
+
+// for (let i = 1; i < 8; i++) {
+//   if (i == 6) {
+//      continue
+//     }
+//   console.log(i);
+  
+// }
+
+
+// console.log(fruits.length)
+// let first = fruits[0];
+// console.log(first);
+
+// let last = fruits[fruits.length - 1];
+// console.log(last);
+
+// fruits.forEach(function(item, index, array) {
+//   console.log(item , index,);
+  
+// });
+
+// let newLength = fruits.push('Апельсин');
+// console.log(fruits);
+
+
+// let lastarr = fruits.pop();
+// console.log(fruits);
+
+
+// let firstarr = fruits.shift();
+// console.log(fruits);
+
+// let firstarradd = fruits.unshift("Клубника");
+// console.log(fruits);
+
+// fruits.push("Mango");
+// console.log(fruits);
+
+// let pos = fruits.indexOf("Банан");
+// console.log(pos);
+
+// let removeItem = fruits.splice(pos, 1);
+// console.log(removeItem);
+
+
+// let vegetables = ['капуста' , 'репа' , 'редиска', 'морковка' ];
+// console.log(vegetables);
+
+// let pos = 1 , n = 2;
+
+// let removedItems = vegetables.splice(pos, n );
+// console.log(vegetables);
+
+// console.log(removedItems);
+
+// let fruits = ['Яблоко','Банан'];
+
+// let shallowCopy = fruits.slice();
+// console.log(fruits);
+
+// console.log(shallowCopy);
+
+
+// dop1_1
+// let name;
+// let price;
+// name = 'Генератор защитного поля';
+// price = 1000;
+// console.log(price);
+// price = 2000;
+// console.log(price);
+// let information;
+// information = ('Выбран ' + name + ' цнеа за штуку ' + price + ' кредитов');
+
+// // alert(information);
+// console.log(information);
+
+// dop 1_2
+
+/*
+  Есть три переменные содержащие составляющие даты: день, месяц, и год. 
+  
+  Создай переменную date, в которую запиши полную дату в формате день\месяц\год
+  Создай переменную message, в которую запиши сообщение "Доброе утро, cегодня 17\10\2048, за бортом отличная погода!"
+  
+  PS: используя шаблонные строки.
+*/
+
+// const day = 17;
+// const month = 10;
+// const year = 2048;
+
+// let date = (day +'/' + month + '/' + year);
+// console.log(date);
+// let message = ('Доброе утро, cегодня ' + date + ', за бортом отличная погода!');
+// console.log(message);
+
+//
+
+
+// dop 1_3
+/*
+  Есть три переменные name, date и roomType, содержащие имя гостя, 
+  дату его прибытия на отдых и тип комнаты отеля.
+  
+  Создай переменную message и используя шаблонные строки запиши в нее сообщение формата:
+  "имя гостя" прибывает на отдых "дата прибытия" в "тип комнаты".
+*/
+
+// const name = 'Mango';
+// const date = '14/08/2137';
+// const roomType = 'люкс';
+// let message = (name + ' прибывает на отдых ' + date + ' в ' + roomType);
+// console.log(message); // Mango прибывает на отдых 14/08/2137 в люкс
+
+//dop 1_4
+
+/*
+  Напиши скрипт который: 
+  
+  - При посещении страницы через prompt cпрашивает 'Введите пароль доступа'
+  
+  - Если был нажат Cancel в prompt, показывать alert с сообщением 'Ожидаю ввода пароля'.
+  
+  - Если введенное значение совпадает со значением переменной correctPassword, 
+    показывать alert со сообщением 'Доступ в секретный бункер разрешен!'
+    
+  - Если что-то другое — показывать alert с сообщением 'Активирована система защиты!'
+*/ 
+
+const correctPassword = 'jqueryismyjam';
+const enterMessage = prompt('Введите пароль доступа');
+console.log(enterMessage);
+
+switch (enterMessage) {
+
+  case 
 }
-window.addEventListener('load', onLoad);
+
+
+
+
+// if (correctPassword == enterMessage) {
+//   alert('Доступ в секретный бункер разрешен!');
+// } else if (enterMessage = null ) {
+//   alert('Ожидаю ввода пароля')
+// }

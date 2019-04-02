@@ -46,10 +46,38 @@
 // }
 
 //=============================================
-const numbers = [];
+// const numbers = [];
 
-for(let i = 0; i < 10; i += 1) {
-  numbers.push(`number-${i}`);
-}
+// for(let i = 0; i < 10; i += 1) {
+//   numbers.push(`number-${i}`);
+// }
 
-console.log(numbers);
+// console.log(numbers);
+
+// let firstNumber;
+
+/*
+ * Переменные объявленые как const обязательно должны быть инициализированы
+ * значением во время объявления, иначе будет ошибка
+ */
+// const secondNumber = 15;
+
+/*
+ * Значение переменной можно получить обратившись к ней по имени.
+ * console.log() используется для вывода данных в консоль разработчика,
+ * с этим методом более детально познакомимся позже.
+ */
+// console.log('secondNumber: ', secondNumber); // 15
+
+// const isComing = confirm('Please confirm hotel reservation');
+// console.log(isComing);
+
+// const hotelName = prompt('Please enter desired hotel name:');
+// alert(hotelName);
+
+// const valueA = 5;
+// console.log(typeof Number(valueA)); // 'number'
+// console.log(Number(valueA)); // 5
+// console.log(typeof (valueA)); // 'number'
+
+console.log((0.1 * 10 + 0.2 * 10) / 10);
