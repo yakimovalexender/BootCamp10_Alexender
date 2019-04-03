@@ -512,20 +512,20 @@ function setActiveBtn(target) {
   - Если что-то другое — показывать alert с сообщением 'Активирована система защиты!'
 */ 
 
-const correctPassword = 'jqueryismyjam';
-const enterMessage = prompt('Введите пароль доступа');
-console.log(enterMessage);
-
-switch (enterMessage) {
-
-  case 
-}
+// const correctPassword = '123';
+// const enterMessage = prompt('Введите пароль доступа');
+// console.log(enterMessage);
 
 
+// switch (enterMessage) {
+//   case null:
+//    alert('Ожидаю ввода пароля');
+//    break;
 
+// case correctPassword:
+// alert('Доступ в секретный бункер разрешен!');
+// break;
+// default:
+// alert('Активирована система защиты!');
+// };
 
-// if (correctPassword == enterMessage) {
-//   alert('Доступ в секретный бункер разрешен!');
-// } else if (enterMessage = null ) {
-//   alert('Ожидаю ввода пароля')
-// }
