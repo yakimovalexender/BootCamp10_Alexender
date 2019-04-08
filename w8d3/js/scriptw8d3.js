@@ -757,7 +757,7 @@ if( totalPrice > credits) {
 PS: используй switch
 */
 
-
+/*
 let country = prompt('Enter country from which you want to arrange delivery ');
 let countryRegister = country.toLowerCase();
 console.log( countryRegister);
@@ -779,3 +779,5 @@ switch (countryRegister) {
   alert('120 кредитов');
   break;
 }
+*/
+

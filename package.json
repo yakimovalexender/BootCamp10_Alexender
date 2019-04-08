@@ -1,0 +1,24 @@
+{
+  "name": "BootCamp10_Alexender",
+  "version": "1.0.0",
+  "description": "[homework](https://yakimovalexender.github.io/BootCamp10_Alexender/w0d1/index.html)",
+  "main": "index.js",
+  "dependencies": {
+    "gulp": "^4.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yakimovalexender/BootCamp10_Alexender.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yakimovalexender/BootCamp10_Alexender/issues"
+  },
+  "homepage": "https://github.com/yakimovalexender/BootCamp10_Alexender#readme"
+}
