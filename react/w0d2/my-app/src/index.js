@@ -1,5 +1,6 @@
 import React , {Fragment}  from 'react';
 import ReactDOM from 'react-dom';
+import { prependOnceListener } from 'cluster';
 
 const link = React.createElement (
   'a',
@@ -13,14 +14,15 @@ Google.com
 </a>
 );
 
-const jsxProducts = (
+const Product = props => 
+    console.log(props) || (    
     <div className="product">
     <img
     className="image"
     src="https://placeimg.com/320/240/arch"
     alt="yummi"
     />
-    <h2 className="name">Raging waffles</h2>
+    <h2 className="name">{props.name}</h2>
     <p className="text">20$</p>
     <button className="btn" type="button">
     Add to cart
@@ -37,4 +39,4 @@ const el = (
     </Fragment>
     );
 
-    ReactDOM.render(el, document.querySelector('#root'));
+    ReactDOM.render(<Product />, document.querySelector('#root'));
