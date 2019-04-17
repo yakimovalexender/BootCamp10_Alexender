@@ -1,0 +1,19 @@
+img {
+    width: 150px;
+}
+
+input {
+    padding: 20px;
+}
+
+.important-item {
+    color: green;
+    font-size: 20px;
+    border: green 1px solid;
+    margin-left: 10px;
+    padding: 5px;
+}
+
+.large {
+    font-size: 40px;
+}
