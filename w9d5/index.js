@@ -1,4 +1,4 @@
-
+/*
 
 
 function alertValue(elementParametr) {
@@ -79,3 +79,69 @@ lastNameEl.title = 'wrong last name'
 // console.log(lastNameEl.value);
 // console.log(lastNameEl.className);
 // alertValue(lastNameId);
+*/
+/*
+function firsrNameLog() {
+    
+
+let firstNameId='first-name';
+let firstNameEl = document.getElementById(firstNameId);
+
+console.log(firstNameEl.value);
+}
+
+function lastNameLog() {
+    
+
+let lastNameId = 'last-name';
+let lastNameEl = document.getElementById(lastNameId);
+
+console.log(lastNameEl.value);
+}
+
+lastNameLog();
+lastNameLog();
+lastNameLog();
+firsrNameLog();
+firsrNameLog();
+
+*/
+/*
+function logValue(id) {
+    let el = document.getElementById(id);
+    console.log(el.value);
+
+}
+
+function getValue(id) {
+    let el = document.getElementById(id);
+return el.value;
+}
+
+let firstNameId = 'first-name';
+let lastNameId = 'last-name'
+
+
+logValue(firstNameId);
+logValue(lastNameId);
+
+let value = getValue(lastNameId)
+
+alert(value)
+*/
+
+function addErrorClass(elementId) {
+    let element = document.getElementById(elementId);
+    element.className = 'error-input';
+}
+
+function addErrorClassToAllInput() {
+addErrorClass('first-name');
+addErrorClass('last-name');
+addErrorClass('adress');
+}
+
+// addErrorClass('last-name');
+// addErrorClassToAllInput();
+
+setTimeout(addErrorClassToAllInput,2000);
