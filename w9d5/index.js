@@ -144,4 +144,19 @@ addErrorClass('adress');
 // addErrorClass('last-name');
 // addErrorClassToAllInput();
 
-setTimeout(addErrorClassToAllInput,2000);
+// setTimeout(addErrorClassToAllInput,2000);
+// addErrorClassToAllInput();
+let sendButton = document.getElementById('send buttion');
+
+sendButton.addEventListener('click',addErrorClassToLastName);
+
+function addErrorClassToLastName() {
+    addErrorClass('last-name');
+}
+
+function onFirstNameKeyup() {
+    addErrorClass('first-name');
+}
+
+let firstNameEl = document.getElementById('first-name');
+firstNameEl.addEventListener('keyup', onFirstNameKeyup);
