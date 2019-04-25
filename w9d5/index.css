@@ -1,4 +1,4 @@
-.default-input {
+/* .default-input {
     border: green 5px solid;
     padding: 5px;
     }
@@ -8,4 +8,28 @@
         padding: 5px;
     }
     
-    
+     */
+
+     .jskmb-calculator{
+         width:  500px;
+margin: auto;
+text-align: center;
+background-color: aliceblue;
+padding: 20px;
+border: 1px solid black;
+     }
+
+     .jskmb-calculator .operations-block button {
+         height: 40px;
+         width: 40px;
+     margin: 20px;
+        }
+
+        .jskmb-calculator .inputs-block .input-block label {
+            display: block;
+        }
+
+        .jskmb-calculator .inputs-block .input-block  {
+            display: inline-block;
+            padding: 10px;
+        }

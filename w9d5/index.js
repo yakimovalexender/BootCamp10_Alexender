@@ -130,6 +130,7 @@ let value = getValue(lastNameId)
 alert(value)
 */
 
+/*
 function addErrorClass(elementId) {
     let element = document.getElementById(elementId);
     element.className = 'error-input';
@@ -160,3 +161,69 @@ function onFirstNameKeyup() {
 
 let firstNameEl = document.getElementById('first-name');
 firstNameEl.addEventListener('keyup', onFirstNameKeyup);
+*/
+
+let buttonPlus = document.getElementById('buttonPlus');
+let buttonMinus = document.getElementById('buttonMinus');
+let buttonMultiply = document.getElementById('buttonMultiply');
+let buttonDevide = document.getElementById('buttonDevide');
+
+var input1 = document.getElementById('number1');
+var input2 = document.getElementById('number2');
+
+function makeOperation(operationCode) {
+    var number1 = Number(input1.value);
+    var number2 = Number(input2.value);
+
+    if (operationCode === '+') {
+        var result = number1 + number2;
+debugger
+    } else if (operationCode === '-') {
+        var result = number1 - number2;
+
+    } else if (operationCode ==='*') {
+        var result = number1 * number2;
+
+    } else if ( operationCode ==='/') {
+        var result = number1 / number2;
+
+    }
+    else { 
+        alert('operation not find')
+    }
+    alert(result);
+}
+
+function onButtonPlusClick() {
+    makeOperation('+');
+}
+ 
+function onButtonMinusClick() {
+    makeOperation('-');
+    }
+
+function onButtonMultiplyClick() {
+    makeOperation('*');
+    }
+
+function onButtonDevideClick() {
+    makeOperation('/');
+    }
+
+
+
+
+
+
+
+
+buttonPlus.addEventListener('click', onButtonPlusClick );
+buttonMinus.addEventListener('click', onButtonMinusClick );
+buttonMultiply.addEventListener('click', onButtonMultiplyClick );
+buttonDevide.addEventListener('click', onButtonDevideClick );
+
+
+
+
+
+
