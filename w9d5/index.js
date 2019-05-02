@@ -177,7 +177,6 @@ function makeOperation(operationCode) {
 
     if (operationCode === '+') {
         var result = number1 + number2;
-debugger
     } else if (operationCode === '-') {
         var result = number1 - number2;
 
@@ -194,35 +193,38 @@ debugger
     alert(result);
 }
 
-function onButtonPlusClick() {
-    makeOperation('+');
+
+
+
+function onOperationButtonClick(eventObject) { 
+var clickedElement = eventObject.currentTarget;
+var operation = clickedElement.innerHTML;
+    makeOperation(operation);
 }
- 
-function onButtonMinusClick() {
-    makeOperation('-');
-    }
 
-function onButtonMultiplyClick() {
-    makeOperation('*');
-    }
+var operationButtons = [buttonPlus,buttonMinus,buttonMultiply,buttonDevide];
 
-function onButtonDevideClick() {
-    makeOperation('/');
-    }
+for (var i=0 ; i < operationButtons.length; i++) {
+    var button = operationButtons[i];
+    button.addEventListener('click', onOperationButtonClick);
+}
+  
 
+// function addCommonEventListener(i) {
+//     operationButtons[i].addEventListener('click', onOperationButtonClick );  
+// }
 
+// var operationButtons= [ buttonPlus,buttonMinus, buttonMultiply, buttonDevide];
 
+// addCommonEventListener(0);
+// addCommonEventListener(1);
+// addCommonEventListener(2);
+// addCommonEventListener(3);
 
-
-
-
-
-buttonPlus.addEventListener('click', onButtonPlusClick );
-buttonMinus.addEventListener('click', onButtonMinusClick );
-buttonMultiply.addEventListener('click', onButtonMultiplyClick );
-buttonDevide.addEventListener('click', onButtonDevideClick );
-
-
+// operationButtons[0].addEventListener('click', onOperationButtonClick );
+// operationButtons[1].addEventListener('click', onOperationButtonClick );
+// operationButtons[2].addEventListener('click', onOperationButtonClick );
+// operationButtons[3].addEventListener('click', onOperationButtonClick );
 
 
 
