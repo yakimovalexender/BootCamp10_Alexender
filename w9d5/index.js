@@ -163,10 +163,16 @@ let firstNameEl = document.getElementById('first-name');
 firstNameEl.addEventListener('keyup', onFirstNameKeyup);
 */
 
-let buttonPlus = document.getElementById('buttonPlus');
-let buttonMinus = document.getElementById('buttonMinus');
-let buttonMultiply = document.getElementById('buttonMultiply');
-let buttonDevide = document.getElementById('buttonDevide');
+//let buttonPlus = document.getElementById('buttonPlus');
+// let buttonMinus = document.getElementById('buttonMinus');
+// let buttonMultiply = document.getElementById('buttonMultiply');
+// let buttonDevide = document.getElementById('buttonDevide');
+
+
+
+// var operationButtons = [buttonPlus,buttonMinus,buttonMultiply,buttonDevide];
+
+var operationButtons=  document.getElementsByClassName('operation-button');
 
 var input1 = document.getElementById('number1');
 var input2 = document.getElementById('number2');
@@ -202,7 +208,7 @@ var operation = clickedElement.innerHTML;
     makeOperation(operation);
 }
 
-var operationButtons = [buttonPlus,buttonMinus,buttonMultiply,buttonDevide];
+
 
 for (var i=0 ; i < operationButtons.length; i++) {
     var button = operationButtons[i];
