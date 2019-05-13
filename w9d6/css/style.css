@@ -2,25 +2,25 @@
     padding: 10px;
 }
 
-.section-hot li:hover {
+.news-content .section-hot li:hover {
     background-color: darkolivegreen;
 }
 
-.section-hot .footer {
+.news-content .section-hot .footer {
     color: darkolivegreen;
 }
 
-.section-realty li:hover {
+.news-content .section-realty li:hover {
     background-color: cadetblue;
 }
 
-.section-realty .footer {
+.news-content .section-realty .footer {
     color: cadetblue;
 }
-li:hover a {
+.news-content .section-news li:hover a {
     color: white;
 }
-h2 {
+.section-news h2 {
     color: white;
     padding: 10px;
 }
@@ -36,3 +36,7 @@ h2 {
     background-color:cadetblue;
 }
 
+.footer {
+    color: white;
+    background-color: black;
+}
