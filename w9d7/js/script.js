@@ -16,13 +16,15 @@ imagesUrls.push('img/donkey.jpeg');
 var currentImageIndex =  0 ; 
 
 slideImage.src = imagesUrls[currentImageIndex]
-
+showPrevBtn.disabled = true;
 
 
 function onShowPrevBtnClick() {
     currentImageIndex--;
     slideImage.src = imagesUrls[currentImageIndex];
-
+    if (currentImageIndex === 0){
+        showPrevBtn.disabled = true;
+    }
     
 }
 
